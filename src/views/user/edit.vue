@@ -1,15 +1,12 @@
 <template>
   <div>
-    <h1>{{ $route.meta.title || 'User edit' }}</h1>
+    <h1>我是Edit</h1>
   </div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style scoped>
-
 </style>
