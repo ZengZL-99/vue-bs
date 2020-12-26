@@ -6,6 +6,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+
 const routes = [
   {
     path: '/',
@@ -19,6 +20,18 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/users',
+    name: 'Users',
+    //redirect: '/users/list',
+    component: () => import('@/views/test_user.vue'),
+    children: [
+      {
+        path: '/list',
+        component: () => import('@/views/user/list.vue')
+      }
+    ]
   }
 ]
 
